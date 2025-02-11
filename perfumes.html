@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day&Night Perfumes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <style>
+       
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .carousel img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+        .product {
+            width: 30%;
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .price {
+            font-size: 18px;
+            color: #e60000;
+            font-weight: bold;
+        }
+        .buy-button {
+            background: #e60000;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .buy-button:hover {
+            background: #c40000;
+        }
+        @media (max-width: 768px) {
+            .product {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Day & Night</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="socks.html">ShockSock</a></li>
+                    <li><a href="clothing.html">MiamiFashions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="carousel">
+            <div class="carousel-item"><img src="images/images/aiGenPerfume.jpeg" alt="Top Perfume 1"></div>
+            <div class="carousel-item"><img src="images/images/aiGenPerfume1.jpeg" alt="Top Perfume 2"></div>
+            <div class="carousel-item"><img src="images/images/cover3.jpg" alt="Top Perfume 3"></div>
+        </section>
+        
+        <section class="product-list">
+            <div class="product">
+                <img src="images/images/aiGenPerfume.jpeg" alt="Perfume 1">
+                <h3>Elegant Essence</h3>
+                <p>A fragrance that speaks luxury.</p>
+                <p class="price">$50</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/images/aiGenPerfume.jpeg" alt="Perfume 2">
+                <h3>Midnight Bloom</h3>
+                <p>A floral scent for every occasion.</p>
+                <p class="price">$45</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/images/aiGenPerfume.jpeg" alt="Perfume 3">
+                <h3>Amber Mist</h3>
+                <p>Warm and sensual, perfect for evenings.</p>
+                <p class="price">$55</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Day&Night. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 3000
+            });
+        });
+    </script>
+</body>
+</html>

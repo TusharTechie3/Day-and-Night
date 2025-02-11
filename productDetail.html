@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Elegant Essence</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style> 
+        .container {
+            width: 90%;
+            margin: auto;
+            text-align: left;
+        }
+        .heading-container{
+            width: 90%;
+            margin: auto;
+            text-align: center;
+        }
+        .product-page {
+            display: flex;
+            flex-wrap: wrap;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .product-images {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .product-images img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product-thumbnails {
+            display: flex;
+            margin-top: 10px;
+        }
+        .product-thumbnails img {
+            width: 50px;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .product-info {
+            align-content: center;
+            width: 55%;
+            padding-left: 20px;
+        }
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .price {
+            font-size: 22px;
+            color: #e60000;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .buy-button {
+            background: #e60000;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .buy-button:hover {
+            background: #c40000;
+        }
+        .product-description {
+            margin-top: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-description h3 {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .product-description ul {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .product-description ul {
+            list-style: disc;
+            /* padding-left: 20px; */
+        }
+        @media (max-width: 768px) {
+            .product-page {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-images, .product-info {
+                width: 100%;
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="heading-container">
+            <h1>Day & Night</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="socks.html">ShockSock</a></li>
+                    <li><a href="clothing.html">MiamiFashions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section class="product-page">
+            <div class="product-images">
+                <img id="mainImage" src="images/images/aiGenPerfume.jpeg" alt="Elegant Essence Perfume">
+                <div class="product-thumbnails">
+                    <img src="images/images/aiGenPerfume1.jpeg" onclick="document.getElementById('mainImage').src=this.src">
+                    <img src="images/images/aiGenPerfume.jpeg" onclick="document.getElementById('mainImage').src=this.src">
+                    <img src="images/images/logo.webp" onclick="document.getElementById('mainImage').src=this.src">
+                </div>
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">Elegant Essence - Premium Fragrance</h2>
+                <p>A luxurious blend of floral and musky notes that lasts all day.</p>
+                <p class="price">$50</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </section>
+        
+        <section class="product-description">
+            <h3>Product Description</h3>
+            <p>Elegant Essence wraps you in a luxurious blend of floral and musk, offering a timeless scent that lingers all day.</p>
+            <h4>Features:</h4>
+            <ul>
+                <li>Long-lasting fragrance</li>
+                <li>Travel friendly</li>
+                <li>IFRA Certified</li>
+                <li>Premium ingredients</li>
+                <li>Vegan, no added parabens, and cruelty-free</li>
+            </ul>
+            <p><strong>Expiry Date:</strong> 15 October 2027</p>
+            <p><strong>Country of Origin:</strong> India</p>
+            <p><strong>Manufacturer:</strong> Nova Cosmetics</p>
+            <p><strong>Address:</strong> B-80/1, Dist, Anand Nagar, Additional M.I.D.C, Ambernath, Maharashtra 421506</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Day&Night. All rights reserved.</p>
+    </footer>
+</body>
+</html>
